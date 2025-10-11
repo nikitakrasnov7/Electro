@@ -1,0 +1,11 @@
+Model Information:
+* title:	Flying Robot 07 / Робот 07
+* source:	https://sketchfab.com/3d-models/flying-robot-07-07-b31dff5e3b344aa1a6f2a3c8454ad440
+* author:	Konstantin_Dem (https://sketchfab.com/Konstantin_Dem)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Flying Robot 07 / Робот 07" (https://sketchfab.com/3d-models/flying-robot-07-07-b31dff5e3b344aa1a6f2a3c8454ad440) by Konstantin_Dem (https://sketchfab.com/Konstantin_Dem) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

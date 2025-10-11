@@ -1,0 +1,11 @@
+Model Information:
+* title:	Electrical outlet pack
+* source:	https://sketchfab.com/3d-models/electrical-outlet-pack-28ed7c5a007e4f9f8225a8781e3e11df
+* author:	3Dji (https://sketchfab.com/3Dji)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Electrical outlet pack" (https://sketchfab.com/3d-models/electrical-outlet-pack-28ed7c5a007e4f9f8225a8781e3e11df) by 3Dji (https://sketchfab.com/3Dji) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

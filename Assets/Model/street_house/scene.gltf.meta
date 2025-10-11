@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: 02f824fe325fd5e4584aaa5b8986cb7c
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\Model\street_house\scene.bin
+    assetPath: Assets\Model\street_house\scene.bin
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.001_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.001_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.002_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.002_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.003_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.003_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.004_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.004_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.005_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.005_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.006_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.006_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.007_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.007_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.009_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.009_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.011_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.011_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.012_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.012_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.013_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.013_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.014_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.014_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.015_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.015_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.016_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.016_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.017_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.017_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.018_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.018_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.019_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.019_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.021_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.021_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.022_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.022_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.023_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.023_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.024_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.024_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.025_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.025_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.026_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.026_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.027_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.027_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.028_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.028_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.029_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.029_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.030_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.030_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.031_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.031_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.034_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.034_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.035_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.035_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house.part.037_1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house.part.037_1_1_0_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\street_house\textures\7_Street_house_0.1_1_0_baseColor.png
+    assetPath: Assets\Model\street_house\textures\7_Street_house_0.1_1_0_baseColor.png
+  reportItems:
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_specular

@@ -8,7 +8,7 @@ public class Toggle : GameeObjects
     {
         base.TestActiveDerTask();
         GetComponent<DerToggle>().OffingToggle();
-        Debug.Log(GetComponent<DerToggle>() == null);
+        
     }
 
 }

@@ -6,9 +6,9 @@ public abstract class AbstractTask:MonoBehaviour
     public bool isActive { get; set; }
     public bool isComplete { get; set; }
 
-    public abstract void StartMission();
+    public virtual void StartMission() { isActive = true; isComplete = false; }
 
     public abstract bool TrackingMission();
-    public abstract void FinishMission();
+    public virtual void FinishMission() { isActive = false;isComplete = true; }
 
 }

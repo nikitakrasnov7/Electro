@@ -18,8 +18,6 @@ public class DerToggle : AbstractTask
     private bool isOn = false;
     public override void FinishMission()
     {
-        isActive = false;
-        isComplete = true;
         ps.Stop();
 
     }

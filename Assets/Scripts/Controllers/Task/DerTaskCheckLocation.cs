@@ -7,10 +7,7 @@ public class DerTaskCheckLocation :AbstractTask
     public static int CountTriggersZone;
    
     public override void FinishMission()
-    {
-        isActive = false;
-        isComplete = true;
-        
+    {  
     }
 
     

@@ -1,0 +1,62 @@
+using System.Collections;
+using System.Runtime.CompilerServices;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class DerToggle : AbstractTask
+{
+    [SerializeField] private GameObject canvasHint;
+
+    [SerializeField] private Image imageToggleState;
+    [SerializeField] private TextMeshProUGUI textToggleState;
+
+
+    [SerializeField] private float Distance = 10f;
+    private bool isOn = false;
+    public override void FinishMission()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void StartMission()
+    {
+        
+    }
+
+    public override bool TrackingMission()
+    {
+        if (!isOn)
+        {
+            float dis = Vector3.Distance(transform.position, GameManager.playerPosition);
+            if (dis <= Distance)
+            {
+                canvasHint.SetActive(true);
+                AlthaColor(dis);
+            }
+            else
+            {
+                canvasHint.SetActive(false);
+            }
+            return false;
+        }
+        else
+        {
+            
+            return true;
+        }
+    }
+    private void AlthaColor(float force)
+    {
+        float brig = Mathf.InverseLerp(Distance, 2, force);
+        brig = Mathf.Clamp01(brig);
+
+        textToggleState.color = Color.Lerp(Color.gray,Color.white,brig);
+    }
+    public void OffingToggle()
+    {
+        isOn = false;
+        canvasHint.SetActive(false);
+    }
+
+}

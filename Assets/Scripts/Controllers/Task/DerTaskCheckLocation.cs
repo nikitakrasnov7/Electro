@@ -13,6 +13,7 @@ public class DerTaskCheckLocation :AbstractTask
         
     }
 
+    
     public override void StartMission()
     {
         CountTriggersZone= FindObjectsOfType<TriggersForCheckLocation>().Length;

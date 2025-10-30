@@ -13,11 +13,14 @@ public class DerToggle : AbstractTask
 
 
     [SerializeField] private float Distance = 10f;
+
+    [SerializeField] private ParticleSystem ps;
     private bool isOn = false;
     public override void FinishMission()
     {
         isActive = false;
         isComplete = true;
+        ps.Stop();
 
     }
 

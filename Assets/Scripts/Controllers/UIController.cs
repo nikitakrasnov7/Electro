@@ -8,7 +8,6 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject prefabTaskText;
     [SerializeField] private GameObject PanelTask;
     private static UIController instance;
-
     
     public static UIController Instance
     {

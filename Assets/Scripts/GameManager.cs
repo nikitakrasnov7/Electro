@@ -1,6 +1,8 @@
 using NUnit.Framework.Internal;
+using System;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -16,22 +18,30 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<AbstractTask> _tasksLevel;
     DerTaskCheckLocation testMissionCheckingLocation;
 
-   static public Vector3 playerPosition;
+    int indexTask = 0;
+    private AbstractTask testActiveTask;
 
-    //public List<AbstractTask> TESTLIST = new  List<AbstractTask>();
-    private void Awake()
+    static public Vector3 playerPosition;
+
+    //=======================
+    public TestTaskSO ListObjectsForTask;
+    //=======================
+
+    private void Start()
     {
 
         RayController.mainCamera = Camera.main;
         RayController.S_mask = mask;
 
-        listMissions = UIController.Instance.UpdateListTasks(TestFirstMissionController.TestListTask);
 
         playerController = FindAnyObjectByType<MovementPlayer>();
         playerController.Init();
 
         testMissionCheckingLocation = FindAnyObjectByType<DerTaskCheckLocation>();
-        testMissionCheckingLocation.StartMission();
+
+        listMissions = UIController.Instance.UpdateListTasks(TestFirstMissionController.TestListTask);
+
+        UpdateTask();
     }
     // Update is called once per frame
     void Update()
@@ -40,30 +50,52 @@ public class GameManager : MonoBehaviour
         raySelectObject = RayController.RaycastHiting();
         RayController.DrawingRay();
         CheckingObjectHint();
+        UsingRayObject();
 
         playerController.PlayerMove();
         playerController.Rotate();
 
         playerPosition = playerController.transform.position;
 
-        if (!testMissionCheckingLocation.isComplete)
+        TrackingMission();
+    }
+
+    private void TrackingMission()
+    {
+        if (!testActiveTask.isComplete)
         {
 
-            if (!testMissionCheckingLocation.TrackingMission())
+            if (!testActiveTask.TrackingMission())
             {
-
+                //Debug.Log(testActiveTask.gameObject.name);
             }
             else
             {
-                testMissionCheckingLocation.FinishMission();
+                testActiveTask.FinishMission();
                 MissionComplete();
+                indexTask++;
+                UpdateTask();
+
             }
 
+        }
+    }
+
+    private void UpdateTask()
+    {
+        if (_tasksLevel[indexTask] != null){
+
+            testActiveTask = _tasksLevel[indexTask];
+            testActiveTask.StartMission();
         }
     }
     private void SearchLevelTasks()
     {
         // TODO должны получать из бд
+        foreach (var o in listMissions)
+        {
+            _tasksLevel.Add(o.GetComponent<AbstractTask>());
+        }
     }
     private void MissionComplete()
     {
@@ -77,11 +109,27 @@ public class GameManager : MonoBehaviour
             if (raySelectObject.GetComponent<GameeObjects>() != null)
             {
                 UIController.Instance.UpdateHint(raySelectObject.GetComponent<GameeObjects>().HintAction);
+
+
             }
         }
         else
         {
             UIController.Instance.UpdateHint("");
+        }
+       
+    }
+
+    private void UsingRayObject()
+    {
+        if (raySelectObject != null && raySelectObject.GetComponent<GameeObjects>() != null)
+        {
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                
+                raySelectObject.GetComponent<GameeObjects>().TestActiveDerTask();
+            }
         }
     }
 }

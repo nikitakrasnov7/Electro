@@ -16,16 +16,16 @@ public class DerTaskCheckLocation :AbstractTask
     public override void StartMission()
     {
         CountTriggersZone= FindObjectsOfType<TriggersForCheckLocation>().Length;
-        Debug.Log(CountTriggersZone);
+       
         isActive = true;
     }
 
     public override bool TrackingMission()
     {
-        Debug.Log("задание идет :" +  CountTriggersZone);
+       
         if (CountTriggersZone == 0)
         {
-            Debug.Log("Задание выполнено");
+            
             return true;    
         }
         return false;

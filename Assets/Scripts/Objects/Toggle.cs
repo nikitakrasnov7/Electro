@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class Toggle : GameeObjects
 {
-    public bool isState;
+
+
+    public override void TestActiveDerTask()
+    {
+        base.TestActiveDerTask();
+        GetComponent<DerToggle>().OffingToggle();
+        Debug.Log(GetComponent<DerToggle>() == null);
+    }
 
 }

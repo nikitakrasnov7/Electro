@@ -15,7 +15,8 @@ public class DerTaskCheckLocation :AbstractTask
     {
         CountTriggersZone= FindObjectsOfType<TriggersForCheckLocation>().Length;
        
-        isActive = true;
+
+
     }
 
     public override bool TrackingMission()

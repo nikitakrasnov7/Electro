@@ -7,13 +7,18 @@ public class DerTaskCheckLocation :AbstractTask
     public static int CountTriggersZone;
    
     public override void FinishMission()
-    {  
+    {
+        isActive = false;
+        isComplete = true;
     }
 
     
     public override void StartMission()
     {
-        CountTriggersZone= FindObjectsOfType<TriggersForCheckLocation>().Length;
+        isActive = true; 
+        isComplete = false; 
+        Debug.Log("start Abstract Mission");
+        CountTriggersZone = FindObjectsOfType<TriggersForCheckLocation>().Length;
        
 
 

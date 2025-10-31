@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     //=======================
     public TestTaskSO ListObjectsForTask;
     //=======================
-
+    
     private void Start()
     {
 

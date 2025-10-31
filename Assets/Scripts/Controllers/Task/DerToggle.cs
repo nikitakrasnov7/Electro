@@ -18,12 +18,16 @@ public class DerToggle : AbstractTask
     private bool isOn = false;
     public override void FinishMission()
     {
+        isActive = false;
+        isComplete = true;
         ps.Stop();
 
     }
 
     public override void StartMission()
     {
+        isActive = true;
+        isComplete = false;
         
     }
 
@@ -32,7 +36,7 @@ public class DerToggle : AbstractTask
         if (!isOn)
         {
             float dis = Vector3.Distance(transform.position, GameManager.playerPosition);
-            
+
             if (dis <= Distance)
             {
                 canvasHint.SetActive(true);
@@ -46,7 +50,7 @@ public class DerToggle : AbstractTask
         }
         else
         {
-            
+
             return true;
         }
     }
@@ -55,13 +59,17 @@ public class DerToggle : AbstractTask
         float brig = Mathf.InverseLerp(Distance, 1, force);
         brig = Mathf.Clamp01(brig);
 
-        textToggleState.color = Color.Lerp(Color.gray,Color.white,brig);
+        textToggleState.color = Color.Lerp(Color.gray, Color.white, brig);
     }
     public void OffingToggle()
     {
-        isOn = true;
-        canvasHint.SetActive(false);
-        Debug.Log("ssssss" + isOn);
+        if (isActive)
+        {
+
+            isOn = true;
+            canvasHint.SetActive(false);
+           
+        }
     }
 
 }

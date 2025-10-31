@@ -7,11 +7,13 @@ public class MovementPlayer : MonoBehaviour
     Transform camera;
     public float Speed = 10f;
 
+    public static Transform HandPosition;
     
     public void Init()
     {
         camera = Camera.main.transform;
         rb = GetComponent<Rigidbody>();
+        HandPosition = GetComponentInChildren<TestHand>().gameObject.transform;
     }
     public void Rotate()
     {

@@ -67,7 +67,6 @@ public class GameManager : MonoBehaviour
 
             if (!testActiveTask.TrackingMission())
             {
-                //Debug.Log(testActiveTask.gameObject.name);
             }
             else
             {
@@ -122,7 +121,7 @@ public class GameManager : MonoBehaviour
 
     private void UsingRayObject()
     {
-        if (raySelectObject != null && raySelectObject.GetComponent<GameeObjects>() != null)
+        if (raySelectObject != null && raySelectObject.GetComponent<GameeObjects>() != null )
         {
 
             if (Input.GetKeyDown(KeyCode.E))

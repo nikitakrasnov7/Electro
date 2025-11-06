@@ -2,34 +2,35 @@ using UnityEngine;
 
 public class DerCable : AbstractTask
 {
-    bool isHand = false;
-    GameObject Cabel;
+    public static bool isHand = false;
+    static GameObject Cabel;
 
     public override void FinishMission()
     {
         isActive = false; 
         isComplete = true;
+        Debug.Log("Finish TASK");
     }
 
     public override void StartMission()
     {
         isActive = true; 
         isComplete = false; 
-        Debug.Log("start Abstract Mission");
+        
 
         Cabel = transform.GetChild(0).gameObject;
-        transform.GetChild(0).gameObject.SetActive(true);
+        Cabel.SetActive(true);
 
     }
-
+    
     public override bool TrackingMission()
     {
-        if (isActive)
+        if (isActive && Cabel != null)
         {
             if (isHand)
             {
 
-                 transform.GetChild(0).GetChild(1).transform.position = MovementPlayer.HandPosition.position;
+                 Cabel.transform.GetChild(1).position = MovementPlayer.HandPosition.position;
             }
 
             return false;
@@ -45,5 +46,11 @@ public class DerCable : AbstractTask
         isHand = true;
 
     }
-
+    
+    public void ConnectionCabel()
+    {
+        isHand = false; 
+        Cabel.transform.GetChild(1).transform.position = gameObject.transform.GetChild(1).position;
+        Cabel = null;
+    }
 }

@@ -7,7 +7,19 @@ public class Provod : GameeObjects
     public override void TestActiveDerTask()
     {
         base.TestActiveDerTask();
-        GetComponent<DerCable>().Uping();
+
+        if (DerCable.isHand)
+        {
+            GetComponent<DerCable>().ConnectionCabel();
+            Debug.Log("Connection");
+            return;
+        }
+        else
+        {
+            Debug.Log("Uping");
+            GetComponent<DerCable>().Uping();
+
+        }
 
     }
 

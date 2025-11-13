@@ -11,12 +11,12 @@ public class Provod : GameeObjects
         if (DerCable.isHand)
         {
             GetComponent<DerCable>().ConnectionCabel();
-            Debug.Log("Connection");
+            
             return;
         }
         else
         {
-            Debug.Log("Uping");
+          
             GetComponent<DerCable>().Uping();
 
         }

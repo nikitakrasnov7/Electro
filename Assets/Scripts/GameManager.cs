@@ -24,23 +24,23 @@ public class GameManager : MonoBehaviour
 
     //=======================
     public TestTaskSO ListObjectsForTask;
-    //=======================
-    [Header("Lines Settings")]
-    public TestLine PlayerLine;
-    public TestLine GameLine;
+    ////=======================
+    //[Header("Lines Settings")]
+    //public TestLine PlayerLine;
+    //public TestLine GameLine;
 
-    public Joystick Amplitude;
-    public Joystick Fequence;
+    //public Joystick Amplitude;
+    //public Joystick Fequence;
 
-    public float minValue;
-    public float maxValueAmplitude;
-    public float maxValueFrequence;
+    //public float minValue;
+    //public float maxValueAmplitude;
+    //public float maxValueFrequence;
 
-    private float gameAmplitude;
-    private float gameFrequence;
+    //private float gameAmplitude;
+    //private float gameFrequence;
 
-    public Gradient finish;
-    public Gradient nofinish;
+    //public Gradient finish;
+    //public Gradient nofinish;
 
 
     private void Start()
@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         listMissions = UIController.Instance.UpdateListTasks(TestFirstMissionController.TestListTask);
 
         UpdateTask();
-        GenerateGameLine();
+        //GenerateGameLine();
     }
     // Update is called once per frame
     void Update()
@@ -148,40 +148,40 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    public void UpdateAmplitude()
-    {
-        float a = PlayerLine.amplitude + Amplitude.rotateValue * 0.01f;
-        float aC = Mathf.Clamp(a, minValue, maxValueAmplitude);
-        PlayerLine.amplitude = aC;
-        CheckLine();
-    }
-    public void UpdateFrequency()
-    {
-        float f =  PlayerLine.frequency + Fequence.rotateValue * 0.01f;
-        float fC = Mathf.Clamp(f, minValue, maxValueFrequence);
-        PlayerLine.frequency = fC;
+    //public void UpdateAmplitude()
+    //{
+    //    float a = PlayerLine.amplitude + Amplitude.rotateValue * 0.01f;
+    //    float aC = Mathf.Clamp(a, minValue, maxValueAmplitude);
+    //    PlayerLine.amplitude = aC;
+    //    CheckLine();
+    //}
+    //public void UpdateFrequency()
+    //{
+    //    float f =  PlayerLine.frequency + Fequence.rotateValue * 0.01f;
+    //    float fC = Mathf.Clamp(f, minValue, maxValueFrequence);
+    //    PlayerLine.frequency = fC;
 
-        CheckLine(); 
-    }
+    //    CheckLine(); 
+    //}
 
-    public void GenerateGameLine() 
-    {
-        gameAmplitude = Random.Range(minValue, maxValueAmplitude);
-        gameFrequence= Random.Range(minValue, maxValueFrequence);
+    //public void GenerateGameLine() 
+    //{
+    //    gameAmplitude = Random.Range(minValue, maxValueAmplitude);
+    //    gameFrequence= Random.Range(minValue, maxValueFrequence);
 
-        GameLine.amplitude = gameAmplitude;
-        GameLine.frequency = gameFrequence;
+    //    GameLine.amplitude = gameAmplitude;
+    //    GameLine.frequency = gameFrequence;
 
-    }
-    public void CheckLine()
-    {
-        if (PlayerLine.amplitude <= gameAmplitude + 0.05f && PlayerLine.amplitude >= gameAmplitude - 0.05f && PlayerLine.frequency <= gameFrequence + 0.05f && PlayerLine.frequency >= gameFrequence - 0.05f)
-        {
-            PlayerLine.lineRenderer.colorGradient = finish;
-        }
-        else
-        {
-            PlayerLine.lineRenderer.colorGradient=nofinish;
-        }
-    }
+    //}
+    //public void CheckLine()
+    //{
+    //    if (PlayerLine.amplitude <= gameAmplitude + 0.05f && PlayerLine.amplitude >= gameAmplitude - 0.05f && PlayerLine.frequency <= gameFrequence + 0.05f && PlayerLine.frequency >= gameFrequence - 0.05f)
+    //    {
+    //        PlayerLine.lineRenderer.colorGradient = finish;
+    //    }
+    //    else
+    //    {
+    //        PlayerLine.lineRenderer.colorGradient=nofinish;
+    //    }
+    //}
 }

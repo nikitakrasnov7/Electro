@@ -9,7 +9,7 @@ public class DerCable : AbstractTask
     {
         isActive = false; 
         isComplete = true;
-        Debug.Log("Finish TASK");
+        
     }
 
     public override void StartMission()

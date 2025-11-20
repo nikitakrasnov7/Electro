@@ -29,13 +29,14 @@ public class DerVoltage : AbstractTask
     {
         isActive = false;
         isComplete = true;
+
+        CanvasElectroBox.SetActive(false);
     }
 
     public override void StartMission()
     {
         isActive = true;
         isComplete = false;
-
         Amplitude.events.AddListener(UpdateAmplitude);
         Fequence.events.AddListener(UpdateFrequency);
 
@@ -48,11 +49,12 @@ public class DerVoltage : AbstractTask
         CheckLine();
         if (Input.GetKeyDown(KeyCode.F) && CheckLine())
         {
-            return false;
+            return true;
         }
+
         else
         {
-            return true;
+            return false;
         }
     }
 
@@ -64,7 +66,6 @@ public class DerVoltage : AbstractTask
         GameLine.amplitude = gameAmplitude;
         GameLine.frequency = gameFrequence;
 
-        print("–¿¡Œ“¿…");
 
     }
     public bool CheckLine()
@@ -79,13 +80,13 @@ public class DerVoltage : AbstractTask
             PlayerLine.lineRenderer.colorGradient = nofinish;
             return false;
         }
+
     }
     public void UpdateAmplitude()
     {
         float a = PlayerLine.amplitude + Amplitude.rotateValue * 0.01f;
         float aC = Mathf.Clamp(a, minValue, maxValueAmplitude);
         PlayerLine.amplitude = aC;
-        CheckLine();
     }
     public void UpdateFrequency()
     {
@@ -93,7 +94,6 @@ public class DerVoltage : AbstractTask
         float fC = Mathf.Clamp(f, minValue, maxValueFrequence);
         PlayerLine.frequency = fC;
 
-        CheckLine();
     }
 }
 

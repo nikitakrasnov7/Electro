@@ -6,5 +6,6 @@ public class Voltage : GameeObjects
     {
         base.TestActiveDerTask();
         GetComponent<DerVoltage>().CanvasElectroBox.SetActive(true);
+        GetComponent<DerVoltage>().GenerateGameLine();
     }
 }

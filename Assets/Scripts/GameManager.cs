@@ -95,11 +95,13 @@ public class GameManager : MonoBehaviour
             }
 
         }
+        print(testActiveTask.gameObject.name);
     }
 
     private void UpdateTask()
     {
-        if (_tasksLevel[indexTask] != null){
+        if (_tasksLevel[indexTask] != null)
+        {
 
             testActiveTask = _tasksLevel[indexTask];
             testActiveTask.StartMission();
@@ -124,7 +126,11 @@ public class GameManager : MonoBehaviour
         {
             if (raySelectObject.GetComponent<GameeObjects>() != null)
             {
-                UIController.Instance.UpdateHint(raySelectObject.GetComponent<GameeObjects>().HintAction);
+                if (raySelectObject.GetComponent<AbstractTask>() != null && raySelectObject.GetComponent<AbstractTask>().isActive)
+                {
+
+                    UIController.Instance.UpdateHint(raySelectObject.GetComponent<GameeObjects>().HintAction);
+                }
 
 
             }
@@ -133,18 +139,21 @@ public class GameManager : MonoBehaviour
         {
             UIController.Instance.UpdateHint("");
         }
-       
+
     }
 
     private void UsingRayObject()
     {
-        if (raySelectObject != null && raySelectObject.GetComponent<GameeObjects>() != null )
+        if (raySelectObject != null && raySelectObject.GetComponent<GameeObjects>() != null)
         {
-
-            if (Input.GetKeyDown(KeyCode.E))
+            if (raySelectObject.GetComponent<AbstractTask>() != null && raySelectObject.GetComponent<AbstractTask>().isActive)
             {
-                
-                raySelectObject.GetComponent<GameeObjects>().TestActiveDerTask();
+
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+
+                    raySelectObject.GetComponent<GameeObjects>().TestActiveDerTask();
+                }
             }
         }
     }

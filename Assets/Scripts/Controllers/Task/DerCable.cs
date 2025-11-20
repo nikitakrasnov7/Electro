@@ -7,22 +7,24 @@ public class DerCable : AbstractTask
 
     public override void FinishMission()
     {
-        isActive = false; 
+        isActive = false;
         isComplete = true;
-        
+
     }
 
     public override void StartMission()
     {
-        isActive = true; 
-        isComplete = false; 
-        
+        isActive = true;
+        isComplete = false;
 
-        Cabel = transform.GetChild(0).gameObject;
-        Cabel.SetActive(true);
+        if (!isHand)
+        {
+            Cabel = transform.GetChild(0).gameObject;
+            Cabel.SetActive(true);
 
+        }
     }
-    
+
     public override bool TrackingMission()
     {
         if (isActive && Cabel != null)
@@ -30,7 +32,7 @@ public class DerCable : AbstractTask
             if (isHand)
             {
 
-                 Cabel.transform.GetChild(1).position = MovementPlayer.HandPosition.position;
+                Cabel.transform.GetChild(1).position = MovementPlayer.HandPosition.position;
             }
 
             return false;
@@ -44,12 +46,12 @@ public class DerCable : AbstractTask
     public void Uping()
     {
         isHand = true;
+        isActive = false;
 
     }
-    
+
     public void ConnectionCabel()
     {
-        isHand = false; 
         Cabel.transform.GetChild(1).transform.position = gameObject.transform.GetChild(1).position;
         Cabel = null;
     }

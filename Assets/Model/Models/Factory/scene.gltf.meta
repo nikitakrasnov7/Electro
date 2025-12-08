@@ -1,0 +1,300 @@
+fileFormatVersion: 2
+guid: 8298968e4fe576840973625e71257ca1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\Model\Models\Factory\scene.bin
+    assetPath: Assets\Model\Models\Factory\scene.bin
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Road_0_1_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Road_0_1_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Road_0_1_metallicRoughness.png
+    assetPath: Assets\Model\Models\Factory\textures\Road_0_1_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Road_0_1_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Road_0_1_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Concrete02_0_2_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Concrete02_0_2_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Concrete02_0_2_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Concrete02_0_2_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Concrete_0_3_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Concrete_0_3_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Pipes1_0_4_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Pipes1_0_4_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\RustyMetal_0_5_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\RustyMetal_0_5_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building4_0_6_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building4_0_6_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building4_0_6_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building4_0_6_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\AirCon_0_7_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\AirCon_0_7_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Props1_0_8_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Props1_0_8_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building5_0_9_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building5_0_9_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building3_C_0_10_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building3_C_0_10_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Lights_0_11_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Lights_0_11_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Props2_0_12_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Props2_0_12_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Brickwork1_0_13_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Brickwork1_0_13_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Brickwork1_0_13_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Brickwork1_0_13_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building4_Windows_0_14_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building4_Windows_0_14_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Drums_0_15_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Drums_0_15_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building3_B_0_16_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building3_B_0_16_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\RoofTopGlass_0_17_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\RoofTopGlass_0_17_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\GarageDoor_0_18_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\GarageDoor_0_18_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Garagesign_0_19_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Garagesign_0_19_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Wood_0_20_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Wood_0_20_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\WaterTower_0_22_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\WaterTower_0_22_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Rubble_0_23_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Rubble_0_23_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Wood02_0_24_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Wood02_0_24_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Wood3_0_25_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Wood3_0_25_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\SteelLight_0_26_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\SteelLight_0_26_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Fence_0_27_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Fence_0_27_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building5Windows_0_28_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\Building5Windows_0_28_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building3_A_0_29.001_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building3_A_0_29.001_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building3_A_0_29.001_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building3_A_0_29.001_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building2_0_30.001_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building2_0_30.001_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building2_0_30.001_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building2_0_30.001_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\RoofingIron_0_31_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\RoofingIron_0_31_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\RoofingIron_0_31_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\RoofingIron_0_31_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building3_D_0_32_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building3_D_0_32_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building3_D_0_32_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building3_D_0_32_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building2Windows_0_33_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\Building2Windows_0_33_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building3_A_Windows_0_34_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Building3_A_Windows_0_34_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building3_B_Windows_0_35_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\Building3_B_Windows_0_35_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Building3_C_Windows_0_36_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\Building3_C_Windows_0_36_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\LampPosts_0_37_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\LampPosts_0_37_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Trash_0_38_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Trash_0_38_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\TrashBags_0_39_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\TrashBags_0_39_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\TrashBin_0_40_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\TrashBin_0_40_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\WireFence_0_41_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\WireFence_0_41_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Paving_0_42_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Paving_0_42_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Paving_0_42_metallicRoughness.png
+    assetPath: Assets\Model\Models\Factory\textures\Paving_0_42_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Paving_0_42_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Paving_0_42_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\ManholeCover_0_43_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\ManholeCover_0_43_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Water_0_44_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\Water_0_44_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Construction_Rubble_riiuE_Low_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Construction_Rubble_riiuE_Low_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Construction_Rubble_riiuE_Low_metallicRoughness.png
+    assetPath: Assets\Model\Models\Factory\textures\Construction_Rubble_riiuE_Low_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Construction_Rubble_riiuE_Low_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Construction_Rubble_riiuE_Low_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Wooden_Pallet_texcdfcda_Low_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Wooden_Pallet_texcdfcda_Low_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Wooden_Pallet_texcdfcda_Low_metallicRoughness.png
+    assetPath: Assets\Model\Models\Factory\textures\Wooden_Pallet_texcdfcda_Low_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Wooden_Pallet_texcdfcda_Low_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Wooden_Pallet_texcdfcda_Low_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Broken_Concrete_Barrier_tlirchzfa_Low_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Broken_Concrete_Barrier_tlirchzfa_Low_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Broken_Concrete_Barrier_tlirchzfa_Low_metallicRoughness.png
+    assetPath: Assets\Model\Models\Factory\textures\Broken_Concrete_Barrier_tlirchzfa_Low_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Broken_Concrete_Barrier_tlirchzfa_Low_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Broken_Concrete_Barrier_tlirchzfa_Low_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.002_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Material.002_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.002_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Material.002_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\Material_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.001_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Material.001_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.001_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Material.001_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.006_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Material.006_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.006_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Material.006_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\utility_box_02_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\utility_box_02_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\utility_box_02_metallicRoughness.png
+    assetPath: Assets\Model\Models\Factory\textures\utility_box_02_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\utility_box_02_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\utility_box_02_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\utility_box_02_specularf0.png
+    assetPath: Assets\Model\Models\Factory\textures\utility_box_02_specularf0.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.007_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Material.007_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.007_metallicRoughness.png
+    assetPath: Assets\Model\Models\Factory\textures\Material.007_metallicRoughness.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.007_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Material.007_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.010_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Material.010_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.010_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Material.010_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.012_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\Material.012_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.015_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\Material.015_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.015_normal.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Material.015_normal.jpeg
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.005_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\Material.005_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.009_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\Material.009_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.016_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\Material.016_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.017_baseColor.png
+    assetPath: Assets\Model\Models\Factory\textures\Material.017_baseColor.png
+  - type: 1
+    originalUri: Assets\Model\Models\Factory\textures\Material.019_baseColor.jpeg
+    assetPath: Assets\Model\Models\Factory\textures\Material.019_baseColor.jpeg
+  reportItems:
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_specular
+  - type: 2
+    code: 20
+    messages:
+    - KHR_materials_emissive_strength

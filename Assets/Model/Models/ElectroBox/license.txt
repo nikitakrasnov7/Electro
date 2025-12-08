@@ -1,0 +1,11 @@
+Model Information:
+* title:	Electric Box
+* source:	https://sketchfab.com/3d-models/electric-box-9d2ea89cb70347aeb7d05216afeb36c4
+* author:	tinderboxh (https://sketchfab.com/tinderboxh)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Electric Box" (https://sketchfab.com/3d-models/electric-box-9d2ea89cb70347aeb7d05216afeb36c4) by tinderboxh (https://sketchfab.com/tinderboxh) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

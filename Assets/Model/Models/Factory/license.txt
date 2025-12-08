@@ -1,0 +1,8 @@
+Model Information:
+* title:	Abandoned Factory [REMODELLED] | Gameready
+* source:	https://sketchfab.com/3d-models/abandoned-factory-remodelled-gameready-fd61aad8ef8242b3a4284890afa6c769
+* author:	abhayexe (https://sketchfab.com/abhayexe)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

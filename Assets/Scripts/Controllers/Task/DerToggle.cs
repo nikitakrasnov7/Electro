@@ -2,6 +2,7 @@ using System.Collections;
 using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DerToggle : AbstractTask
@@ -15,12 +16,15 @@ public class DerToggle : AbstractTask
     [SerializeField] private float Distance = 10f;
 
     [SerializeField] private ParticleSystem ps;
+
+    [SerializeField] UnityEvent action;
     private bool isOn = false;
     public override void FinishMission()
     {
         isActive = false;
         isComplete = true;
         ps.Stop();
+        action?.Invoke();
 
     }
 

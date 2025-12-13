@@ -7,4 +7,5 @@ using UnityEngine;
 public class TestTaskSO : ScriptableObject
 {
     public List<GameObject> objectsForMission = new List<GameObject>(); 
+    public List<string> ListTask = new List<string>();
 }

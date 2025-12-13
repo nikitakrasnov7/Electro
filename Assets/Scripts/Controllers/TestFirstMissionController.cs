@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TestFirstMissionController
 {
-    public static List<string> TestListTask = new List<string>
+    public static List<string> ListTask1 = new List<string>
     {
         "Осмотреть территорию",
         "Отключить электричество провода",
@@ -13,6 +13,16 @@ public class TestFirstMissionController
         "Соединить провод и станцию",
         "Настроить напряжение станции",
         "Включить станцию"
+    };
+    public static List<string> ListTask2 = new List<string>
+    {
+        "Открыть элетрический ящик",
+        "Отключить ток в коробке",
+        "Забраться на столб",
+        "Взять провод",
+        "Спуститься на землю",
+        "Подключить провод к ящику",
+        "Запустить электричество по схеме"
     };
 
     

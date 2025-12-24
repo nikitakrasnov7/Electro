@@ -1,0 +1,11 @@
+Model Information:
+* title:	Лампочка
+* source:	https://sketchfab.com/3d-models/8e753a617f7245278d7dfe4734897e1d
+* author:	Usma (https://sketchfab.com/Usma3D)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Лампочка" (https://sketchfab.com/3d-models/8e753a617f7245278d7dfe4734897e1d) by Usma (https://sketchfab.com/Usma3D) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

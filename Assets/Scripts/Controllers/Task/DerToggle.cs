@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Runtime.CompilerServices;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -23,7 +22,10 @@ public class DerToggle : AbstractTask
     {
         isActive = false;
         isComplete = true;
-        ps.Stop();
+        if (ps != null)
+        {
+            ps.Stop();
+        }
         action?.Invoke();
 
     }
@@ -32,7 +34,7 @@ public class DerToggle : AbstractTask
     {
         isActive = true;
         isComplete = false;
-        
+
     }
 
     public override bool TrackingMission()
@@ -72,7 +74,7 @@ public class DerToggle : AbstractTask
 
             isOn = true;
             canvasHint.SetActive(false);
-           
+
         }
     }
 

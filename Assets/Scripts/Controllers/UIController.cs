@@ -7,8 +7,18 @@ public class UIController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI txt_Hint;
     [SerializeField] private GameObject prefabTaskText;
     [SerializeField] private GameObject PanelTask;
+
+    [SerializeField] private GameObject FinishPanel;
+
+    [SerializeField] private TextMeshProUGUI txt_time;
+    [SerializeField] private TextMeshProUGUI txt_click;
+    [SerializeField] private TextMeshProUGUI txt_result;
+
+    [SerializeField] private GameObject PausePanel;
+
+   
     private static UIController instance;
-    
+
     public static UIController Instance
     {
         get
@@ -20,20 +30,39 @@ public class UIController : MonoBehaviour
             return instance;
         }
     }
-
+   
+    public void Pause()
+    {
+        PausePanel.SetActive(!PausePanel.activeSelf);
+        if (PausePanel.activeSelf)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
+    }
     public void UpdateHint(string hint)
     {
         txt_Hint.text = hint;
     }
+    public void FinishGame(string time, int click)
+    {
+        FinishPanel.SetActive(true);
+        txt_time.text = time;
+        txt_click.text = click.ToString();
+        txt_result.text = "amazing";
+    }
     public List<GameObject> UpdateListTasks(List<string> tasks)
     {
         List<GameObject> listTask = new List<GameObject>();
-        for (int i=0; i < tasks.Count; i++)
+        for (int i = 0; i < tasks.Count; i++)
         {
             GameObject task = Instantiate(prefabTaskText);
             task.transform.SetParent(PanelTask.transform);
             task.transform.localScale = new Vector3(1, 1, 1);
-            string t = $"{i+1}) {tasks[i]}";
+            string t = $"{i + 1}) {tasks[i]}";
             task.GetComponent<TextMeshProUGUI>().text = t;
             listTask.Add(task);
 
@@ -42,5 +71,12 @@ public class UIController : MonoBehaviour
 
     }
 
-
+    public void Resume()
+    {
+        SceneInfo.Resume();
+    }
+    public void ExitToMap()
+    {
+        SceneInfo.ExitToMap();
+    }
 }

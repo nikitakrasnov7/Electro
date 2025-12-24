@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using TMPro;
 
@@ -23,9 +24,10 @@ public class GameManager : MonoBehaviour
     static public Vector3 playerPosition;
 
     public TestTaskSO ListObjectsForTask;
-   
+    float time;
+    int countClick;
 
-
+    [SerializeField] private PlayerSaveController saveController;
     private void Start()
     {
 
@@ -38,12 +40,10 @@ public class GameManager : MonoBehaviour
 
         testMissionCheckingLocation = FindAnyObjectByType<DerTaskCheckLocation>();
 
-        //listMissions = UIController.Instance.UpdateListTasks(TestFirstMissionController.ListTask1);
         listMissions = UIController.Instance.UpdateListTasks(ListObjectsForTask.ListTask);
-        
+
         UpdateTask();
     }
-    // Update is called once per frame
     void Update()
     {
 
@@ -52,14 +52,53 @@ public class GameManager : MonoBehaviour
         CheckingObjectHint();
         UsingRayObject();
 
-        playerController.PlayerMove();
-        playerController.Rotate();
+        playerController.PlayerControlling();
 
         playerPosition = playerController.transform.position;
+        if (testActiveTask != null && ListObjectsForTask != null)
+        {
 
-        TrackingMission();
+            TrackingMission();
+        }
+
+
+        LevelResoult();
+
+        TestSave();
+        Pause();
+
     }
-
+    private void Pause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UIController.Instance.Pause();
+        }
+    }
+    private void TestSave()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            saveController.SaveGame(time, countClick);
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            saveController.LoadPlayerData();
+        }
+    }
+    public void LevelResoult()
+    {
+        time += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            countClick++;
+        }
+    }
+    private string TimeConvert()
+    {
+        TimeSpan timeSpan = TimeSpan.FromSeconds(this.time);
+        return $"{(int)timeSpan.TotalHours:D2}:{timeSpan.Minutes:D2}:{timeSpan.Seconds:D2}:{timeSpan.Milliseconds:D3}"; ;
+    }
     private void TrackingMission()
     {
         if (!testActiveTask.isComplete)
@@ -70,15 +109,29 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                testActiveTask.FinishMission();
-                MissionComplete();
-                indexTask++;
-                UpdateTask();
+                CompletingMission();
 
             }
 
         }
-        print(testActiveTask.gameObject.name);
+    }
+    public void CompletingMission()
+    {
+        testActiveTask.FinishMission();
+        MissionComplete();
+        indexTask++;
+        print(indexTask + " " + _tasksLevel.Count);
+        if (indexTask >= _tasksLevel.Count)
+        {
+            Debug.Log("Конец уровня");
+            UIController.Instance.FinishGame(TimeConvert(), countClick);
+
+        }
+        else
+        {
+            UpdateTask();
+
+        }
     }
 
     private void UpdateTask()
@@ -89,6 +142,7 @@ public class GameManager : MonoBehaviour
             testActiveTask = _tasksLevel[indexTask];
             testActiveTask.StartMission();
         }
+
     }
     private void SearchLevelTasks()
     {
@@ -112,8 +166,8 @@ public class GameManager : MonoBehaviour
                 if (raySelectObject.GetComponent<AbstractTask>() != null && raySelectObject.GetComponent<AbstractTask>().isActive)
                 {
 
-                    UIController.Instance.UpdateHint(raySelectObject.GetComponent<GameeObjects>().HintAction);
                 }
+                UIController.Instance.UpdateHint(raySelectObject.GetComponent<GameeObjects>().HintAction);
 
 
             }
@@ -140,5 +194,5 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-    
+
 }

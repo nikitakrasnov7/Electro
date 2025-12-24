@@ -103,6 +103,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -248,3 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ad710c867cfba341849677d8d38bf09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameSceneName: SampleScene
+  UISceneName: UI
+  MapSceneName: MapMenu
+  minScene: 1
+  maxScene: 4

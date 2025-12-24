@@ -1,13 +1,15 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartMenuManager : MonoBehaviour
 {
-   [SerializeField] private string SceneMap = "MapMenu";
-
-    public void StartingNewGame()
+    [SerializeField] private string SceneMap = "MapMenu";
+    [SerializeField] TMP_InputField namePlayer;
+    public DataManager dbManager;
+    public void CreateNewSession()
     {
-        SceneManager.LoadScene(SceneMap);
+       
     }
     public void ResumeGame()
     {

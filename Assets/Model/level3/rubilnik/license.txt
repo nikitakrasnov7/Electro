@@ -1,0 +1,11 @@
+Model Information:
+* title:	First Model of Miniature Circuit Breaker
+* source:	https://sketchfab.com/3d-models/first-model-of-miniature-circuit-breaker-d1ab346c96a34b5e8d03f7ac11fa1e1c
+* author:	GeniusPilot2016 (https://sketchfab.com/GeniusPilot2016)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "First Model of Miniature Circuit Breaker" (https://sketchfab.com/3d-models/first-model-of-miniature-circuit-breaker-d1ab346c96a34b5e8d03f7ac11fa1e1c) by GeniusPilot2016 (https://sketchfab.com/GeniusPilot2016) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

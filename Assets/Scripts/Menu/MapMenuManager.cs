@@ -44,7 +44,7 @@ public class MapMenuManager : MonoBehaviour
     }
     IEnumerator Factory()
     {
-        while (maxCountMark < 30)
+        while (maxCountMark < 300)
         {
             CreateMark();
             maxCountMark++;

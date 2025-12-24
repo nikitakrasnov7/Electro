@@ -83,13 +83,13 @@ public class DerVoltage : AbstractTask
     }
     public void UpdateAmplitude()
     {
-        float a = PlayerLine.amplitude + Amplitude.rotateValue * 0.01f;
+        float a = PlayerLine.amplitude + Amplitude.rotateValue * 0.001f;
         float aC = Mathf.Clamp(a, minValue, maxValueAmplitude);
         PlayerLine.amplitude = aC;
     }
     public void UpdateFrequency()
     {
-        float f = PlayerLine.frequency + Fequence.rotateValue * 0.01f;
+        float f = PlayerLine.frequency + Fequence.rotateValue * 0.001f;
         float fC = Mathf.Clamp(f, minValue, maxValueFrequence);
         PlayerLine.frequency = fC;
 

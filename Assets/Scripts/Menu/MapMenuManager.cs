@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class MapMenuManager : MonoBehaviour
@@ -8,12 +9,29 @@ public class MapMenuManager : MonoBehaviour
     [SerializeField] private Transform leftDownPoint;
     [SerializeField] private Transform rightUpPoint;
 
+    [SerializeField] TextMeshProUGUI nikname;
+    [SerializeField] TextMeshProUGUI level;
+    [SerializeField] TextMeshProUGUI missiomCount;
+
+    [SerializeField] private SessionInfoSO info;
+
+
     int maxCountMark;
     private void Start()
     {
+        Time.timeScale = 1;
         StartCoroutine(Factory());
     }
-
+    private void OnEnable()
+    {
+        GetInfo();
+    }
+    public void GetInfo()
+    {
+        nikname.text = "player " + info.Nikname;
+        level.text = "level "+info.level.ToString();
+        missiomCount.text = "mission complete " + info.missionCompleteCount.ToString();
+    }
     void CreateMark()
     {
         GameObject newM = Instantiate(newMark);

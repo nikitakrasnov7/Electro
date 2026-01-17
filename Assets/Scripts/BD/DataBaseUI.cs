@@ -9,6 +9,7 @@ public class DataBaseUI : MonoBehaviour
     public Button continueButton;
 
     private DataManager db;
+    public SessionInfoSO info;
 
     
     public void Init() { 
@@ -39,7 +40,9 @@ public class DataBaseUI : MonoBehaviour
         db.AddOrUpdatePlayer(playerName);
 
         PlayerPrefs.SetString("CurrentPlayer", playerName);
-
+        info.Nikname = playerName;
+        info.level = 0;
+        info.missionCompleteCount = 0;
         SceneManager.LoadScene("MapMenu");
     }
 

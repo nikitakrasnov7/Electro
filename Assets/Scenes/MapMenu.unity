@@ -766,6 +766,10 @@ MonoBehaviour:
   parent: {fileID: 1827273880}
   leftDownPoint: {fileID: 1329034003}
   rightUpPoint: {fileID: 233509351}
+  nikname: {fileID: 927573150}
+  level: {fileID: 1815681342}
+  missiomCount: {fileID: 1009063155}
+  info: {fileID: 11400000, guid: 7d40ced363670b148a33c61ea8ef7a9c, type: 2}
 --- !u!4 &1628807243
 Transform:
   m_ObjectHideFlags: 0

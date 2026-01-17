@@ -14,7 +14,7 @@ public class SaveManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            
             Init();
         }
         else
@@ -116,5 +116,10 @@ public class SaveManager : MonoBehaviour
             saveData = null;
             Debug.Log("файл удален");
         }
+    }
+
+    private void OnDestroy()
+    {
+        Destroy(gameObject);
     }
 }

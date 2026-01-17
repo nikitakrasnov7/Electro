@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 
@@ -16,7 +17,13 @@ public class UIController : MonoBehaviour
 
     [SerializeField] private GameObject PausePanel;
 
-   
+    [SerializeField] TextMeshProUGUI nikname;
+    [SerializeField] TextMeshProUGUI level;
+    [SerializeField] TextMeshProUGUI missiomCount;
+
+    [SerializeField] private SessionInfoSO info;
+
+
     private static UIController instance;
 
     public static UIController Instance
@@ -30,7 +37,12 @@ public class UIController : MonoBehaviour
             return instance;
         }
     }
-   
+   public void GetInfo()
+    {
+        nikname.text = info.Nikname;
+        level.text = info.level.ToString();
+        missiomCount.text = info.missionCompleteCount.ToString();
+    }
     public void Pause()
     {
         PausePanel.SetActive(!PausePanel.activeSelf);

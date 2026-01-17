@@ -206,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DataBaseUI
   nameInput: {fileID: 1597626743}
   continueButton: {fileID: 1358348987}
+  info: {fileID: 11400000, guid: 7d40ced363670b148a33c61ea8ef7a9c, type: 2}
 --- !u!1 &141831883
 GameObject:
   m_ObjectHideFlags: 0
@@ -2049,7 +2050,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1666733284
 MonoBehaviour:

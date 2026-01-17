@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
     float time;
     int countClick;
 
+    public SessionInfoSO info;
+
     [SerializeField] private PlayerSaveController saveController;
     private void Start()
     {
@@ -41,7 +43,6 @@ public class GameManager : MonoBehaviour
         testMissionCheckingLocation = FindAnyObjectByType<DerTaskCheckLocation>();
 
         listMissions = UIController.Instance.UpdateListTasks(ListObjectsForTask.ListTask);
-
         UpdateTask();
     }
     void Update()
@@ -124,6 +125,9 @@ public class GameManager : MonoBehaviour
         if (indexTask >= _tasksLevel.Count)
         {
             Debug.Log("Конец уровня");
+            info.missionCompleteCount++;
+            info.LevelUp();
+        
             UIController.Instance.FinishGame(TimeConvert(), countClick);
 
         }

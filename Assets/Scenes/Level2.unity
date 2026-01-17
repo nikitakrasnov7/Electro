@@ -5130,6 +5130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1664219768}
   - component: {fileID: 1664219767}
+  - component: {fileID: 1664219769}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -5160,6 +5161,8 @@ MonoBehaviour:
   - {fileID: 525661073}
   - {fileID: 1857661675}
   ListObjectsForTask: {fileID: 11400000, guid: edce86ceb1f670b4eafd8ea5274bc607, type: 2}
+  info: {fileID: 11400000, guid: 7d40ced363670b148a33c61ea8ef7a9c, type: 2}
+  saveController: {fileID: 2122970756}
 --- !u!4 &1664219768
 Transform:
   m_ObjectHideFlags: 0
@@ -5175,6 +5178,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1664219769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664219766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c337867926cba7d43a67db1bf59c2e7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveManager
+  saveFileName: savegame.json
+  useEncryption: 0
 --- !u!43 &1697790786
 Mesh:
   m_ObjectHideFlags: 0
@@ -6020,6 +6037,17 @@ Transform:
   - {fileID: 661990781}
   m_Father: {fileID: 1999102615}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2122970756 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9155985699787367127, guid: e32533f5f5d9f8941a4aabd5165eb4df, type: 3}
+  m_PrefabInstance: {fileID: 1612533957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7c3652e188109d429eda0c4e7ab9b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerSaveController
 --- !u!23 &30671851470678972
 MeshRenderer:
   m_ObjectHideFlags: 0

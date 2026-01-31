@@ -24,11 +24,14 @@ public class GtaMovement : MonoBehaviour
         print(rb.linearVelocity.magnitude);
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        directionMove.Set(horizontal, rb.angularVelocity.y, vertical);
 
+        directionMove.Set(horizontal, rb.angularVelocity.y, vertical);
         directionMove = AnimBody.transform.TransformDirection(directionMove);
+
+        transform.Rotate(Vector3.up * horizontal *25);
         
         animator.SetFloat("MoveSpeed", vertical);
+        animator.SetFloat("HorSpeed", horizontal);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -49,5 +52,6 @@ public class GtaMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + directionMove * Speed * Time.fixedDeltaTime);
+       
     }
 }

@@ -1,10 +1,14 @@
+using System.Runtime.Versioning;
 using UnityEngine;
 
 public class GtaMovement : MonoBehaviour
 {
     [SerializeField][Min(0)] float Speed = 10;
     [SerializeField][Min(0)] float JumpForce = 3;
+    [SerializeField][Min(0)] float RotateSpeed = 20;
     [SerializeField] Transform AnimBody;
+    TestMoveCamera moveCamera;
+    Transform target;
 
     Vector3 directionMove;
     Animator animator;
@@ -14,22 +18,23 @@ public class GtaMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        moveCamera = FindAnyObjectByType<TestMoveCamera>();
     }
     private void Update()
     {
         Move();
+
     }
     private void Move()
     {
-        print(rb.linearVelocity.magnitude);
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
         directionMove.Set(horizontal, rb.angularVelocity.y, vertical);
         directionMove = AnimBody.transform.TransformDirection(directionMove);
 
-        transform.Rotate(Vector3.up * horizontal *25);
-        
+        transform.Rotate(Vector3.up * horizontal * RotateSpeed);
+
         animator.SetFloat("MoveSpeed", vertical);
         animator.SetFloat("HorSpeed", horizontal);
 
@@ -52,6 +57,30 @@ public class GtaMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + directionMove * Speed * Time.fixedDeltaTime);
-       
+
     }
+
+   
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Point") && other.gameObject.GetComponent<PointForMission>() != null)
+        {
+            target = other.gameObject.GetComponent<PointForMission>().Point;
+            if (moveCamera != null && target != null)
+            {
+                moveCamera.Point = target;
+            }
+            
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Point") && other.gameObject.GetComponent<PointForMission>() != null)
+        {
+            moveCamera.Point = null;
+            target = null;
+        } 
+    }
+   
 }

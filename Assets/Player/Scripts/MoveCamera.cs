@@ -25,19 +25,19 @@ public class MoveCamera : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && point != null)
         {
             target = (target == PLayer) ? point : PLayer;
-            if(target == point)
+            if (target == point)
             {
                 startRotate = transform.rotation;
-                if (point.gameObject.GetComponent<TaskAbstract>() != null) 
-                {
-                    point.gameObject.GetComponent<TaskAbstract>().OnAction();
-                }
+
+                point.parent.GetComponent<TaskAbstract>().OnAction();
+
+
             }
             if (target == PLayer)
             {
 
                 transform.rotation = startRotate;
-                //UIController.Instance.OpenHintButton(false);
+                UIController.Instance.OpenHintButton(false);
 
             }
             transform.SetParent(target);
@@ -46,6 +46,7 @@ public class MoveCamera : MonoBehaviour
         if (target != PLayer)
         {
             transform.LookAt(target.transform.parent);
+
         }
         transform.position = Vector3.MoveTowards(transform.position, target.position, speedMove);
 

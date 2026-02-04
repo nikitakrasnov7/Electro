@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CorrectClick : TaskAbstract, ITaskDescription
 {
-    [SerializeField] GameObject InfoButton;
+
     [SerializeField] List<int> correctClicks = new List<int>();
     private List<int> UserClicks = new List<int>();
 
@@ -13,9 +13,9 @@ public class CorrectClick : TaskAbstract, ITaskDescription
 
     public override void OnAction()
     {
-        InfoButton.SetActive(true);
         UIController.Instance.UpdateTaskHint(HintDescription);
         UIController.Instance.OpenHintButton(true);
+        print("сука");
     }
 
     public void GetClick(int clickInfo)

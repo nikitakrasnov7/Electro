@@ -2,7 +2,7 @@ using Mono.Cecil;
 using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
-public class TestMoveCamera : MonoBehaviour
+public class MoveCamera : MonoBehaviour
 {
     [SerializeField] Transform PLayer;
     [SerializeField] Transform point;
@@ -28,11 +28,17 @@ public class TestMoveCamera : MonoBehaviour
             if(target == point)
             {
                 startRotate = transform.rotation;
+                if (point.gameObject.GetComponent<TaskAbstract>() != null) 
+                {
+                    point.gameObject.GetComponent<TaskAbstract>().OnAction();
+                }
             }
             if (target == PLayer)
             {
 
                 transform.rotation = startRotate;
+                //UIController.Instance.OpenHintButton(false);
+
             }
             transform.SetParent(target);
 

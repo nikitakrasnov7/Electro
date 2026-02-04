@@ -7,7 +7,7 @@ public class GtaMovement : MonoBehaviour
     [SerializeField][Min(0)] float JumpForce = 3;
     [SerializeField][Min(0)] float RotateSpeed = 20;
     [SerializeField] Transform AnimBody;
-    TestMoveCamera moveCamera;
+    MoveCamera moveCamera;
     Transform target;
 
     Vector3 directionMove;
@@ -18,7 +18,7 @@ public class GtaMovement : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        moveCamera = FindAnyObjectByType<TestMoveCamera>();
+        moveCamera = FindAnyObjectByType<MoveCamera>();
     }
     private void Update()
     {
@@ -68,6 +68,7 @@ public class GtaMovement : MonoBehaviour
             target = other.gameObject.GetComponent<PointForMission>().Point;
             if (moveCamera != null && target != null)
             {
+                UIController.Instance.UpdateHint(other.gameObject.GetComponent<PointForMission>().Hint);
                 moveCamera.Point = target;
             }
             
@@ -79,6 +80,7 @@ public class GtaMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Point") && other.gameObject.GetComponent<PointForMission>() != null)
         {
             moveCamera.Point = null;
+            UIController.Instance.CloseHint();
             target = null;
         } 
     }

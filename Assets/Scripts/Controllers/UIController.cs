@@ -23,7 +23,12 @@ public class UIController : MonoBehaviour
 
     [SerializeField] private SessionInfoSO info;
 
+    List<TextMeshProUGUI> tasksList = new List<TextMeshProUGUI>();
 
+    [Header("New version")]
+    [SerializeField] TextMeshProUGUI textHint;
+    [SerializeField] Animator TaskHintPanel;
+    [SerializeField] GameObject HintButton;
     private static UIController instance;
 
     public static UIController Instance
@@ -59,6 +64,15 @@ public class UIController : MonoBehaviour
     {
         txt_Hint.text = hint;
     }
+    public void CloseHint()
+    {
+        txt_Hint.text = "";
+    }
+
+    public void UpdateTaskHint(string text)
+    {
+        textHint.text = text;
+    }
     public void FinishGame(string time, int click)
     {
         FinishPanel.SetActive(true);
@@ -83,6 +97,21 @@ public class UIController : MonoBehaviour
 
     }
 
+    public void AddMission(int i,string task)
+    {
+        GameObject newTask = Instantiate(prefabTaskText);
+        newTask.transform.SetParent(PanelTask.transform);
+        newTask.transform.localScale = new Vector3(1, 1, 1);
+        string t = $"{i + 1}) {task}";
+        newTask .GetComponent<TextMeshProUGUI>().text = t;
+
+        tasksList.Add(newTask.GetComponent<TextMeshProUGUI>());
+    }
+    public void MissionComplete(int i)
+    {
+        tasksList[i].GetComponent<TextMeshProUGUI>().text += " +";
+    }
+
     public void Resume()
     {
         SceneInfo.Resume();
@@ -90,5 +119,20 @@ public class UIController : MonoBehaviour
     public void ExitToMap()
     {
         SceneInfo.ExitToMap();
+    }
+
+    public void OpenTaskHint()
+    {
+        TaskHintPanel.SetBool("isOpen", true);
+    }
+
+    public void CloseTaskHint()
+    {
+        TaskHintPanel.SetBool("isOpen", false);
+    }
+
+    public void OpenHintButton(bool state)
+    {
+        HintButton.SetActive(state);
     }
 }

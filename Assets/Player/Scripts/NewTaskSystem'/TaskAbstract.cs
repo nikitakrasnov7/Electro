@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class TaskAbstract : MonoBehaviour
+public abstract class TaskAbstract : MonoBehaviour, ITaskDescription
 {
 
     private bool isActive = false;
@@ -11,16 +11,21 @@ public abstract class TaskAbstract : MonoBehaviour
 
     private bool isComplete = false;
     public bool IsComplete { get; set; }
+
+    [field: SerializeField]
+    public string Description { get; set; }
+    public string HintDescription;
+
     protected void Start()
     {
-        isActive = true;
+        IsActive = true;
     }
     protected void End()
     {
-        if (isActive && !isComplete)
+        if (IsActive && !IsComplete)
         {
-            isActive = false;
-            isComplete = true;
+            IsActive = false;
+            IsComplete = true;
         }
     }
 
@@ -28,6 +33,6 @@ public abstract class TaskAbstract : MonoBehaviour
     public void EndMission() => End();
 
 
-    protected abstract void OnAction();
+    public abstract void OnAction();
 
 }

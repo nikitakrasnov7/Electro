@@ -2,16 +2,20 @@ using UnityEngine;
 
 public class MissionCheck : TaskAbstract
 {
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            End();
+            if (Input.GetKeyDown(KeyCode.E) && IsActive)
+            {
+                GameManagerGta.Instance.MissionComplete(this);
+            }
         }
     }
 
-    protected override void OnAction()
+    public override void OnAction()
     {
-        
+
     }
 }

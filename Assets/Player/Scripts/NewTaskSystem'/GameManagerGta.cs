@@ -6,14 +6,14 @@ public class GameManagerGta : MonoBehaviour
     int indexActiveTask = 0;
     TaskAbstract activeTask;
 
-    private static GameManager instance;
-    public static GameManager Instance
+    private static GameManagerGta instance;
+    public static GameManagerGta Instance
     {
         get
         {
             if (instance == null)
             {
-                instance = FindAnyObjectByType<GameManager>();
+                instance = FindAnyObjectByType<GameManagerGta>();
             }
             return instance;
         }
@@ -21,13 +21,17 @@ public class GameManagerGta : MonoBehaviour
 
     private void Start()
     {
+        for (int i = 0; i < tasks.Length; i++)
+        {
+            UIController.Instance.AddMission(i, tasks[i].Description);
+        }
         NextLevel();
     }
 
 
     public void NextLevel()
     {
-        if (indexActiveTask <= tasks.Length)
+        if (indexActiveTask <= tasks.Length - 1)
         {
             activeTask = tasks[indexActiveTask];
             indexActiveTask++;
@@ -35,6 +39,16 @@ public class GameManagerGta : MonoBehaviour
         else
         {
             // победа
+        }
+    }
+    public void MissionComplete(TaskAbstract task)
+    {
+        if (task == activeTask)
+        {
+
+            task.EndMission();
+            UIController.Instance.MissionComplete(indexActiveTask - 1);
+            NextLevel();
         }
     }
 
